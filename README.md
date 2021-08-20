@@ -21,7 +21,7 @@ Welcome to our Genomics Lab where we do everything with genes🧬. This is a tea
 ## Stage 2 Task 🧐🧐
 - Reproduce a bioinformatics tutorial that correlates with our biostack (Genomics) 
 - Advertise a quick and simple design of our desired tutorial on #transfer-market channel on Slack workspace 
-- Create a comprehensive markdown of the step followed 
+- Create a comprehensive markdown of the steps followed 
 
 Exciting!😍
 
@@ -39,10 +39,30 @@ Our Lab of Genomics-One-A will investigate :detective: exome sequencing data fro
 <br>
 
 ## Workflow ✍️
+Step 1: Retrieve sequenced reads of father, mother and proband  in fastq format and import the datasets into the https://usegalaxy.org/ or https://usegalaxy.eu/
+
+Step 2: Perform quality check using FastQC tool and aggregate all the FastQC results into single report using MultiQC tool.
+
+Step 3: Perform adapter trimming using Trimmomatic tool on fastq datasets.
+
+Step 4: Perform read mapping using Map with BWA-MEM tool to generate BAM file.
+
+Step 5: Perform mapped reads post-processing using Filter SAM or BAM, output SAM or BAM tool and RmDup tool to filter low quality mapped reads and remove duplicate reads respectively. 
+
+Step 6: Perform variant calling step using FreeBayes tools to generate VCF file containing SNPs, MNPs and Indels.
+
+Step 7: Perform FreeBayes post-processing using bcftool norm to normalize indels and split multiallelic sites into multiple rows.
+
+Step 8: Perform variant annotation using SnpEff eff tool and SnpSift tool.
+
+Step 9: Perform the combined variant extraction/annotation/storage step using GEMINI load tool.
+
+Step 10: Perform candidate variant detection using GEMINI inheritance pattern tool.
+
 
 <p align="center">
    <br>
-<img align="center" alt="gif" src="https://github.com/qamrq/team_genomics_one_a/blob/main/workflow.gif" width="650">
+<img align="center" alt="gif" src="https://github.com/662amandeep/Team-Genomics-One-A/blob/main/Images/workflow.gif" width="650">
  <br>
 <br>
 </p>
@@ -67,7 +87,7 @@ Get to know our awesome team members and their contributions 👩‍💻👨‍�
 | [Anjali Negi](https://github.com/genesis234) | @genesis  | Validation of Workflow and Performed FastQC of Mother’s dataset, Worked on Graphical representation  |
 | [Darshana Joshi](https://github.com/darshana2509) | @DarshanaJoshi  | Validation of Workflow and Performed variant annotation using GEMINI load and candidate variant detection |
 | [Harshitha BC](https://github.com/HarshithaBC) | @Harshitha  | Validation of Workflow and Performed FastQC of Proband’s dataset, Worked on GitHub readme file |
-| Jyothi| @Jyothi  | Validation of Workflow and Performed MultiQC of FastQC files  |
+| [Jyothi](https://github.com/jyothi1721)| @Jyothi  | Validation of Workflow and Performed MultiQC of FastQC files  |
 | [Lakshmi S Prasad](https://github.com/Lakshmip108) | @lakshmip  | Validation of Workflow and Performed mapping of Father’s datasets  | 
 | [Lokesh V](https://github.com/lokegamechanger) | @Lokesh | Validation of Workflow and Performed mapping of Mother’s datasets  |
 |[Nanthana Ravichandran](https://github.com/nanthanaravichandran)| @Nanthanaravi   | Validation of Workflow and Performed mapping of Proband’s datasets |
